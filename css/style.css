@@ -317,6 +317,8 @@ img{ max-width: 100%; display:block; }
 .ticket-price-label{ display:block; font-family: var(--font-mono); font-size: .66rem; letter-spacing: .1em; color: var(--ink-soft); margin-bottom: 4px; }
 .ticket-price{ font-family: var(--font-display); font-size: 1.7rem; font-weight: 800; color: var(--terracotta-dark); line-height: 1.15; }
 .ticket-price-tbd{ font-family: var(--font-mono); font-size: 1.05rem; font-weight: 700; color: var(--ink-soft); }
+.ticket-note{ font-size: .8rem; color: var(--ink-soft); margin: 12px 0 0; }
+.ticket-note a{ color: var(--terracotta-dark); font-weight: 700; border-bottom: 1px solid currentColor; }
 
 /* --------------------------------- entry --------------------------------- */
 .entry-grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
