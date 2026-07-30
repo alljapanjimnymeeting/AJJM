@@ -180,6 +180,8 @@ img{ max-width: 100%; display:block; }
 .btn-textlink:hover{ border-color: #fff; }
 .btn-textlink .chev{ transition: transform .2s var(--ease); font-size: 1.1em; }
 .btn-textlink:hover .chev{ transform: translateX(4px); }
+.btn-textlink-dark{ color: var(--terracotta-dark); border-color: rgba(217,88,76,.35); }
+.btn-textlink-dark:hover{ border-color: var(--terracotta-dark); }
 
 /* --------------------------------- buttons -------------------------------- */
 .btn{
