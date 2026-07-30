@@ -319,7 +319,7 @@ img{ max-width: 100%; display:block; }
 .ticket-price-tbd{ font-family: var(--font-mono); font-size: 1.05rem; font-weight: 700; color: var(--ink-soft); }
 
 /* --------------------------------- entry --------------------------------- */
-.entry-grid{ display:grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
+.entry-grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
 @media (max-width: 860px){ .entry-grid{ grid-template-columns: 1fr; } }
 .entry-card{
   position: relative;
