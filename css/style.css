@@ -334,6 +334,15 @@ img{ max-width: 100%; display:block; }
 .entry-card p{ font-size: .9rem; margin-bottom: 0; }
 .entry-card a{ color: var(--terracotta-dark); font-weight: 700; border-bottom: 1px solid currentColor; }
 
+.entry-card-warning{
+  background: #fdf1ee; border: 2px solid var(--terracotta);
+  box-shadow: 0 6px 20px rgba(217,88,76,.14);
+}
+.entry-card-warning .entry-card-tag{ color: #fff; background: var(--terracotta); }
+.entry-card-warning h3{ color: var(--terracotta-dark); display:flex; align-items:center; gap: 8px; }
+.entry-card-warning .warning-icon{ flex-shrink: 0; }
+.entry-card-warning p{ color: var(--ink); }
+
 /* --------------------------------- access --------------------------------- */
 .access-grid{ display:grid; grid-template-columns: 1fr 1.3fr; gap: 36px; align-items: start; }
 @media (max-width: 780px){ .access-grid{ grid-template-columns: 1fr; } }
