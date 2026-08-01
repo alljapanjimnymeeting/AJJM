@@ -276,17 +276,7 @@ img{ max-width: 100%; display:block; }
   position: relative; background: #fff; border-radius: var(--radius);
   box-shadow: 0 6px 20px rgba(var(--shadow-warm),.07); padding: 20px 20px 44px;
 }
-.fieldguide-sketch svg{ width: 100%; height: auto; }
-.fg-block rect{
-  fill: var(--cream-soft); stroke: rgba(var(--shadow-warm),.18); stroke-width: 1.5;
-  transition: fill .25s var(--ease), stroke .25s var(--ease);
-}
-.fg-block text{
-  font-family: var(--font-mono); font-size: 15px; font-weight: 700; fill: var(--ink-soft);
-  text-anchor: middle; dominant-baseline: middle; transition: fill .25s var(--ease);
-}
-.fg-block.is-active rect{ fill: var(--teal); stroke: var(--teal-dark); }
-.fg-block.is-active text{ fill: #fff; }
+.fieldguide-sketch img{ width: 100%; height: auto; border-radius: 10px; display:block; }
 .fg-sketch-note{
   position: absolute; left: 20px; bottom: 14px; font-family: var(--font-mono); font-size: .64rem;
   color: var(--ink-soft); opacity: .75; letter-spacing: .02em;
