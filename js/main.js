@@ -100,14 +100,19 @@
 
   /* ------------------------------ visitor counter ------------------------------ */
   const counterValue = document.getElementById("counter-value");
+  function renderCounter(text){
+    counterValue.innerHTML = text.split("").map((ch, i) =>
+      `<span class="${i % 2 === 0 ? "digit-a" : "digit-b"}">${ch}</span>`
+    ).join("");
+  }
   if (counterValue){
     fetch("https://abacus.jasoncameron.dev/hit/alljapanjimnymeeting-ajjm/visits")
       .then(res => res.json())
       .then(data => {
-        counterValue.textContent = String(data.value).padStart(6, "0");
+        renderCounter(String(data.value).padStart(6, "0"));
       })
       .catch(() => {
-        counterValue.textContent = "------";
+        renderCounter("------");
       });
   }
 

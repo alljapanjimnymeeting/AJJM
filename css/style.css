@@ -444,14 +444,16 @@ img{ max-width: 100%; display:block; }
   padding: 18px 24px 26px;
 }
 .counter-label{
-  font-family: var(--font-mono); font-size: .64rem; letter-spacing: .14em; color: rgba(255,255,255,.4);
+  font-family: var(--font-mono); font-size: .64rem; letter-spacing: .14em; color: var(--teal-bright);
 }
 .counter-display{
   display:inline-flex; gap: 2px; font-family: var(--font-mono); font-weight: 700;
-  font-size: 1.1rem; letter-spacing: .1em; color: var(--teal-bright);
-  background: #14100c; border: 1px solid rgba(63,167,184,.35); border-radius: 6px;
-  padding: 6px 12px; text-shadow: 0 0 8px rgba(63,167,184,.75), 0 0 2px rgba(63,167,184,.9);
+  font-size: 1.1rem; letter-spacing: .1em;
+  background: #14100c; border: 1px solid rgba(217,88,76,.4); border-radius: 6px;
+  padding: 6px 12px;
 }
+.counter-display .digit-a{ color: var(--teal-bright); text-shadow: 0 0 8px rgba(63,167,184,.75), 0 0 2px rgba(63,167,184,.9); }
+.counter-display .digit-b{ color: var(--terracotta); text-shadow: 0 0 8px rgba(217,88,76,.75), 0 0 2px rgba(217,88,76,.9); }
 
 /* --------------------------------- reveal fx --------------------------------- */
 .reveal{ opacity: 0; transform: translateY(24px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
