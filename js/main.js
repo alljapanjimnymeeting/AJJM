@@ -98,4 +98,17 @@
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+  /* ------------------------------ visitor counter ------------------------------ */
+  const counterValue = document.getElementById("counter-value");
+  if (counterValue){
+    fetch("https://abacus.jasoncameron.dev/hit/alljapanjimnymeeting-ajjm/visits")
+      .then(res => res.json())
+      .then(data => {
+        counterValue.textContent = String(data.value).padStart(6, "0");
+      })
+      .catch(() => {
+        counterValue.textContent = "------";
+      });
+  }
+
 })();

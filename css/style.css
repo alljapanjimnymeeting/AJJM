@@ -439,6 +439,20 @@ img{ max-width: 100%; display:block; }
 }
 .footer-totop:hover{ border-color: var(--terracotta); }
 
+.counter-bar{
+  display:flex; align-items:center; justify-content:center; gap: 14px; flex-wrap: wrap;
+  padding: 18px 24px 26px;
+}
+.counter-label{
+  font-family: var(--font-mono); font-size: .64rem; letter-spacing: .14em; color: rgba(255,255,255,.4);
+}
+.counter-display{
+  display:inline-flex; gap: 2px; font-family: var(--font-mono); font-weight: 700;
+  font-size: 1.1rem; letter-spacing: .1em; color: var(--teal-bright);
+  background: #14100c; border: 1px solid rgba(63,167,184,.35); border-radius: 6px;
+  padding: 6px 12px; text-shadow: 0 0 8px rgba(63,167,184,.75), 0 0 2px rgba(63,167,184,.9);
+}
+
 /* --------------------------------- reveal fx --------------------------------- */
 .reveal{ opacity: 0; transform: translateY(24px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
 .reveal.in-view{ opacity: 1; transform: translateY(0); }
