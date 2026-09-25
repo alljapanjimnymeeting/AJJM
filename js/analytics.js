@@ -6,7 +6,7 @@
 (() => {
   "use strict";
 
-  const GA4_ID = "";  // 例: "G-XXXXXXXXXX"(GA4 → 管理 → データストリーム → ウェブ)
+  const GA4_ID = "G-L04RHXX9S3";  // 例: "G-XXXXXXXXXX"(GA4 → 管理 → データストリーム → ウェブ)
 
   // ローカル確認(file:// や localhost)では計測しない
   const isLocal = location.protocol === "file:" || /^(localhost|127\.0\.0\.1)$/.test(location.hostname);
