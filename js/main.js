@@ -41,26 +41,6 @@
     onScroll();
   }
 
-  /* ------------------------------ field guide tabs ------------------------------ */
-  const fgTabs = document.querySelectorAll(".fg-tab");
-  const fgBlocks = document.querySelectorAll(".fg-block");
-  const fgPanels = document.querySelectorAll(".fg-panel");
-
-  function setZone(zone){
-    fgTabs.forEach(el => {
-      const active = el.dataset.zone === zone;
-      el.classList.toggle("is-active", active);
-      el.setAttribute("aria-pressed", String(active));
-    });
-    fgBlocks.forEach(el => el.classList.toggle("is-active", el.dataset.zone === zone));
-    fgPanels.forEach(el => el.classList.toggle("is-active", el.dataset.zone === zone));
-  }
-
-  fgTabs.forEach(tab => {
-    tab.addEventListener("click", () => setZone(tab.dataset.zone));
-    tab.addEventListener("mouseenter", () => setZone(tab.dataset.zone));
-  });
-
   /* ------------------------------ mobile nav ------------------------------ */
   const navToggle = document.getElementById("nav-toggle");
   const siteNav = document.getElementById("site-nav");
@@ -97,23 +77,5 @@
   /* ------------------------------ footer year ------------------------------ */
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
-
-  /* ------------------------------ visitor counter ------------------------------ */
-  const counterValue = document.getElementById("counter-value");
-  function renderCounter(text){
-    counterValue.innerHTML = text.split("").map((ch, i) =>
-      `<span class="${i % 2 === 0 ? "digit-a" : "digit-b"}">${ch}</span>`
-    ).join("");
-  }
-  if (counterValue){
-    fetch("https://abacus.jasoncameron.dev/hit/alljapanjimnymeeting-ajjm/visits")
-      .then(res => res.json())
-      .then(data => {
-        renderCounter(String(data.value).padStart(6, "0"));
-      })
-      .catch(() => {
-        renderCounter("------");
-      });
-  }
 
 })();
