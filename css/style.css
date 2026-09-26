@@ -225,9 +225,10 @@ img{ max-width: 100%; height: auto; display:block; }
 
 .about-grid{ display:grid; grid-template-columns: 1.6fr 1fr; gap: 44px; align-items: start; }
 @media (max-width: 860px){ .about-grid{ grid-template-columns: 1fr; } }
-.about-photo{ max-width: 260px; margin: 0 auto; text-align: center; }
+.about-photo{ max-width: 240px; margin: 0 auto; text-align: center; }
 .about-photo img{
-  width: 100%; border-radius: var(--radius); box-shadow: 0 10px 30px rgba(var(--shadow-warm),.16);
+  width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: center 30%;
+  border-radius: var(--radius); box-shadow: 0 10px 30px rgba(var(--shadow-warm),.16);
 }
 .about-photo-caption{ margin-top: 14px; }
 .about-photo-caption .role{
