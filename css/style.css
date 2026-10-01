@@ -166,6 +166,19 @@ img{ max-width: 100%; height: auto; display:block; }
 .hero-title .w-terracotta{ color: var(--terracotta); }
 .hero-title .w-teal{ color: var(--teal-bright); }
 
+.hero-countdown{
+  display: inline-flex; align-items: baseline; margin: -8px 0 28px;
+  padding: 8px 18px; border-radius: 999px;
+  background: rgba(20,16,12,.45); border: 1px solid rgba(255,255,255,.22);
+  font-weight: 700; font-size: .95rem; color: #fff;
+}
+.hero-countdown[hidden], .hero-countdown [hidden]{ display: none; }
+.hero-countdown .cd-num{
+  font-family: var(--font-mono); font-size: 1.7rem; line-height: 1;
+  color: var(--terracotta); margin: 0 6px;
+}
+.hero-countdown .cd-live{ color: var(--mustard); }
+
 .hero-stats{
   display:grid; grid-template-columns: repeat(4, auto); gap: 28px;
   margin-bottom: 36px; padding-bottom: 30px; border-bottom: 1px solid rgba(255,255,255,.18);

@@ -74,6 +74,25 @@
     revealEls.forEach(el => el.classList.add("in-view"));
   }
 
+  /* ------------------------------ hero countdown ------------------------------ */
+  // Counts days in Japan time; shows "本日開催中" on event days and hides after.
+  const countdown = document.getElementById("hero-countdown");
+  if (countdown){
+    const DAY = 86400000;
+    const toDay = (ymd) => { const [y, m, d] = ymd.split("-").map(Number); return Date.UTC(y, m - 1, d) / DAY; };
+    const today = Math.floor((Date.now() + 9 * 3600000) / DAY);
+    const toStart = toDay(countdown.dataset.start) - today;
+    const toEnd = toDay(countdown.dataset.end) - today;
+    if (toStart > 0){
+      document.getElementById("cd-num").textContent = toStart;
+      countdown.hidden = false;
+    } else if (toEnd >= 0){
+      countdown.querySelector(".cd-before").hidden = true;
+      countdown.querySelector(".cd-live").hidden = false;
+      countdown.hidden = false;
+    }
+  }
+
   /* ------------------------------ footer year ------------------------------ */
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
