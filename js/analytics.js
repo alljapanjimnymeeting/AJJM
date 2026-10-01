@@ -28,6 +28,11 @@
   // その他の外部リンクは GA4 の拡張計測(click イベント)が自動で取る
   document.addEventListener("click", (e) => {
     const a = e.target.closest("a[href]");
+    // 「カレンダーに追加」ボタン = 参加の意思が強い人なので add_to_calendar で数える
+    if (a && a.dataset.cal){
+      window.gtag("event", "add_to_calendar", { method: a.dataset.cal });
+      return;
+    }
     if (!a || !/instagram\.com/.test(a.href)) return;
     const section = a.closest("section[id]");
     const where = (location.pathname.split("/").pop() || "index.html") + (section ? "#" + section.id : "");

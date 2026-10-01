@@ -179,6 +179,15 @@ img{ max-width: 100%; height: auto; display:block; }
 }
 .hero-countdown .cd-live{ color: var(--mustard); }
 
+.cal-add{
+  display:flex; align-items:center; justify-content:center; flex-wrap: wrap; gap: 12px 14px; margin-top: 32px;
+}
+.cal-add-label{ font-weight: 700; font-size: .9rem; color: var(--ink); width: 100%; text-align: center; }
+.btn-cal{ background: #fff; color: var(--teal); border-color: var(--teal); padding: 12px 22px; gap: 8px; }
+.btn-cal:hover{ background: var(--teal); color: #fff; transform: translateY(-2px); }
+.btn-cal svg{ width: 18px; height: 18px; flex: none; }
+@media (max-width: 480px){ .btn-cal{ width: 100%; } }
+
 .hero-stats{
   display:grid; grid-template-columns: repeat(4, auto); gap: 28px;
   margin-bottom: 36px; padding-bottom: 30px; border-bottom: 1px solid rgba(255,255,255,.18);
@@ -357,20 +366,15 @@ img{ max-width: 100%; height: auto; display:block; }
 }
 .back-link:hover{ color: var(--teal); }
 
-.goods-grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
-@media (max-width: 860px){ .goods-grid{ grid-template-columns: 1fr; } }
-.goods-card{
-  background: #fff; border-radius: var(--radius); padding: 28px 24px; text-align: center;
+.goods-notice{
+  max-width: 620px; margin: 0 auto; text-align: center;
+  background: #fff; border-radius: var(--radius); padding: 40px 32px;
   box-shadow: 0 6px 20px rgba(var(--shadow-warm),.07);
-  display:flex; flex-direction: column; align-items: center;
 }
-.goods-icon{ width: 64px; height: 64px; margin-bottom: 16px; }
-.goods-tag{
-  display:block; font-family: var(--font-mono); font-size: .64rem; letter-spacing: .1em;
-  color: var(--teal); margin-bottom: 8px;
-}
-.goods-card h3{ font-size: 1.05rem; color: var(--ink); margin-bottom: 10px; font-family: var(--font-body); font-weight: 700; }
-.goods-card p{ font-size: .88rem; margin-bottom: 18px; }
+@media (max-width: 640px){ .goods-notice{ padding: 32px 20px; } }
+.goods-notice h2{ font-size: 1.3rem; color: var(--ink); margin: 16px 0 14px; font-family: var(--font-body); }
+.goods-notice p{ font-size: .92rem; }
+.goods-notice .goods-notice-sub{ font-size: .82rem; margin-bottom: 24px; }
 .goods-status{
   display:inline-block; font-family: var(--font-mono); font-size: .68rem; font-weight: 700; letter-spacing: .08em;
   color: var(--mustard-dark); background: var(--cream-soft); border-radius: 999px; padding: 5px 14px; margin-top: auto;

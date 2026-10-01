@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ALL JAPAN JIMNY MEETING//AJJM//JA
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:ajjm-2027@alljapanjimnymeeting.github.io
+DTSTAMP:20261001T000000Z
+DTSTART;VALUE=DATE:20270724
+DTEND;VALUE=DATE:20270726
+SUMMARY:ALL JAPAN JIMNY MEETING 2027
+LOCATION:平谷高原スキー場（長野県下伊那郡平谷村）
+DESCRIPTION:全国のジムニーオーナーが集う交流イベント。
+ 7/24(土)・25(日)の2日間。\n詳細: https://alljapanjimnymeeting.git
+ hub.io/AJJM/\n最新情報: https://www.instagram.com/alljapanjimnymeeting
+ /
+URL:https://alljapanjimnymeeting.github.io/AJJM/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:ALL JAPAN JIMNY MEETING は明日から
+TRIGGER:-PT15H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
