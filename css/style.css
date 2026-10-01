@@ -179,14 +179,33 @@ img{ max-width: 100%; height: auto; display:block; }
 }
 .hero-countdown .cd-live{ color: var(--mustard); }
 
-.cal-add{
-  display:flex; align-items:center; justify-content:center; flex-wrap: wrap; gap: 12px 14px; margin-top: 32px;
-}
-.cal-add-label{ font-weight: 700; font-size: .9rem; color: var(--ink); width: 100%; text-align: center; }
-.btn-cal{ background: #fff; color: var(--teal); border-color: var(--teal); padding: 12px 22px; gap: 8px; }
-.btn-cal:hover{ background: var(--teal); color: #fff; transform: translateY(-2px); }
+.btn.btn-cal{ background: #fff; color: var(--teal); border-color: var(--teal); padding: 12px 22px; gap: 8px; }
+.btn.btn-cal:hover{ background: var(--teal); color: #fff; transform: translateY(-2px); }
 .btn-cal svg{ width: 18px; height: 18px; flex: none; }
-@media (max-width: 480px){ .btn-cal{ width: 100%; } }
+.btn-cal{ width: 100%; }
+
+.overview-card-btn{ font: inherit; border: 2px solid transparent; cursor: pointer; }
+.overview-card-btn:hover, .overview-card-btn:focus-visible{ border-color: var(--teal); outline: none; }
+.overview-hint{
+  font-size: .74rem; font-weight: 700; color: var(--teal);
+  border-bottom: 1px dashed rgba(14,91,104,.5); padding-bottom: 1px;
+}
+.cal-dialog{
+  width: min(400px, calc(100% - 32px)); padding: 28px 24px 18px; border: none; border-radius: var(--radius);
+  background: var(--paper); color: var(--ink); text-align: center;
+  box-shadow: 0 24px 60px rgba(var(--shadow-warm),.35);
+}
+.cal-dialog:focus{ outline: none; }
+.btn-cal:focus-visible{ outline: 2px solid var(--teal-bright); outline-offset: 2px; }
+.cal-dialog::backdrop{ background: rgba(20,16,12,.55); }
+.cal-dialog-title{ font-weight: 700; font-size: 1.05rem; color: var(--ink); margin-bottom: 6px; }
+.cal-dialog-date{ font-size: .82rem; margin-bottom: 20px; }
+.cal-dialog-actions{ display: flex; flex-direction: column; gap: 12px; }
+.cal-dialog-close{
+  margin-top: 12px; padding: 10px 20px; border: none; background: none; font: inherit;
+  font-size: .85rem; color: var(--ink-soft); cursor: pointer;
+}
+.cal-dialog-close:hover{ color: var(--ink); }
 
 .hero-stats{
   display:grid; grid-template-columns: repeat(4, auto); gap: 28px;

@@ -93,6 +93,26 @@
     }
   }
 
+  /* ------------------------------ add-to-calendar chooser ------------------------------ */
+  // The 開催日程 card opens a dialog asking which calendar to use.
+  const calOpen = document.getElementById("cal-open");
+  const calDialog = document.getElementById("cal-dialog");
+  if (calOpen && calDialog && typeof calDialog.showModal === "function"){
+    calOpen.addEventListener("click", () => calDialog.showModal());
+    calDialog.querySelector(".cal-dialog-close").addEventListener("click", () => calDialog.close());
+    // tap on the dimmed backdrop closes it
+    calDialog.addEventListener("click", (e) => {
+      if (e.target !== calDialog) return;
+      const r = calDialog.getBoundingClientRect();
+      const inside = e.clientX >= r.left && e.clientX <= r.right && e.clientY >= r.top && e.clientY <= r.bottom;
+      if (!inside) calDialog.close();
+    });
+    calDialog.querySelectorAll("a").forEach(a => a.addEventListener("click", () => calDialog.close()));
+  } else if (calOpen && calDialog){
+    // very old browsers: fall back to the plain Google Calendar link
+    calOpen.addEventListener("click", () => { location.href = calDialog.querySelector("a").href; });
+  }
+
   /* ------------------------------ footer year ------------------------------ */
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
